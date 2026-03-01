@@ -14,9 +14,9 @@ import { formatDate } from "@/lib/utils";
 import { GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Sobre mí",
   description:
-    "Learn about Lorena Criado Manzaneque — her background, values, work experience, and education as a Full-Stack Engineer.",
+    "Conoce a Lorena Criado Manzaneque — su trayectoria, valores, experiencia laboral y formación académica como Full-Stack Engineer.",
 };
 
 // Cast for async Server Component type compat
@@ -37,7 +37,7 @@ export default async function AboutPage() {
       >
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-label-md text-accent uppercase tracking-widest mb-3">
-            About Me
+            Sobre mí
           </p>
           <h1
             id="about-page-heading"
@@ -56,7 +56,7 @@ export default async function AboutPage() {
 
       {/* Education */}
       <Section id="education" bg="secondary" spacing="md">
-        <SectionHeader eyebrow="Education" heading="Academic Background" />
+        <SectionHeader eyebrow="Formación" heading="Trayectoria académica" />
         <ul className="space-y-6" role="list">
           {education.map((edu) => (
             <li

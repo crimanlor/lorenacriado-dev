@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | Lorena Criado",
   },
   description:
-    "Full-Stack Engineer specializing in scalable web applications, clean architecture, and developer experience. Based in Spain.",
+    "Full-Stack Engineer especializada en aplicaciones web escalables, arquitectura limpia y experiencia de desarrollo. Basada en España.",
   keywords: [
     "Full-Stack Engineer",
     "Next.js",
@@ -54,19 +54,19 @@ export const metadata: Metadata = {
     "React",
     "Node.js",
     "Software Engineer",
-    "Spain",
+    "España",
     "Lorena Criado",
   ],
   authors: [{ name: "Lorena Criado Manzaneque", url: "https://lorenacriado.dev" }],
   creator: "Lorena Criado Manzaneque",
   openGraph: {
     type: "website",
-    locale: "en_GB",
+    locale: "es_ES",
     url: "https://lorenacriado.dev",
     siteName: "Lorena Criado Manzaneque",
     title: "Lorena Criado Manzaneque — Full-Stack Engineer",
     description:
-      "Full-Stack Engineer specializing in scalable web applications, clean architecture, and developer experience.",
+      "Full-Stack Engineer especializada en aplicaciones web escalables, arquitectura limpia y experiencia de desarrollo.",
     images: [
       {
         url: "/og-image.png",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lorena Criado Manzaneque — Full-Stack Engineer",
     description:
-      "Full-Stack Engineer specializing in scalable web applications and clean architecture.",
+      "Full-Stack Engineer especializada en aplicaciones web escalables y arquitectura limpia.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -117,7 +117,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning // Suppresses mismatch from theme class injected by inline script
     >

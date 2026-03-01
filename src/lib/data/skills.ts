@@ -10,7 +10,7 @@ import type { SkillGroup } from "@/domain/types";
 export const skillGroupsData: ReadonlyArray<SkillGroup> = [
   {
     category: "language",
-    label: "Languages",
+    label: "Lenguajes",
     skills: [
       { id: "ts",     name: "TypeScript",  category: "language",    level: "expert",     yearsOfExperience: 5 },
       { id: "js",     name: "JavaScript",  category: "language",    level: "expert",     yearsOfExperience: 7 },
@@ -20,7 +20,7 @@ export const skillGroupsData: ReadonlyArray<SkillGroup> = [
   },
   {
     category: "framework",
-    label: "Frameworks & Libraries",
+    label: "Frameworks y Librerías",
     skills: [
       { id: "react",    name: "React",       category: "framework", level: "expert",     yearsOfExperience: 5 },
       { id: "nextjs",   name: "Next.js",     category: "framework", level: "expert",     yearsOfExperience: 4 },
@@ -32,7 +32,7 @@ export const skillGroupsData: ReadonlyArray<SkillGroup> = [
   },
   {
     category: "database",
-    label: "Databases",
+    label: "Bases de Datos",
     skills: [
       { id: "postgres", name: "PostgreSQL", category: "database", level: "expert",     yearsOfExperience: 5 },
       { id: "mongo",    name: "MongoDB",    category: "database", level: "proficient", yearsOfExperience: 4 },
@@ -41,22 +41,22 @@ export const skillGroupsData: ReadonlyArray<SkillGroup> = [
   },
   {
     category: "cloud",
-    label: "Cloud & Infrastructure",
+    label: "Cloud e Infraestructura",
     skills: [
-      { id: "aws",     name: "AWS",        category: "cloud",   level: "proficient", yearsOfExperience: 4 },
-      { id: "docker",  name: "Docker",     category: "cloud",   level: "expert",     yearsOfExperience: 4 },
-      { id: "vercel",  name: "Vercel",     category: "cloud",   level: "expert",     yearsOfExperience: 3 },
-      { id: "github",  name: "GitHub CI/CD",category: "cloud",  level: "expert",     yearsOfExperience: 5 },
+      { id: "aws",     name: "AWS",         category: "cloud",   level: "proficient", yearsOfExperience: 4 },
+      { id: "docker",  name: "Docker",      category: "cloud",   level: "expert",     yearsOfExperience: 4 },
+      { id: "vercel",  name: "Vercel",      category: "cloud",   level: "expert",     yearsOfExperience: 3 },
+      { id: "github",  name: "GitHub CI/CD",category: "cloud",   level: "expert",     yearsOfExperience: 5 },
     ],
   },
   {
     category: "methodology",
-    label: "Methodologies",
+    label: "Metodologías",
     skills: [
-      { id: "agile",    name: "Agile / Scrum",       category: "methodology", level: "expert",     yearsOfExperience: 5 },
-      { id: "tdd",      name: "TDD",                  category: "methodology", level: "proficient", yearsOfExperience: 4 },
-      { id: "ddd",      name: "Domain-Driven Design", category: "methodology", level: "proficient", yearsOfExperience: 3 },
-      { id: "a11y",     name: "Web Accessibility",    category: "methodology", level: "proficient", yearsOfExperience: 3 },
+      { id: "agile",    name: "Agile / Scrum",          category: "methodology", level: "expert",     yearsOfExperience: 5 },
+      { id: "tdd",      name: "TDD",                    category: "methodology", level: "proficient", yearsOfExperience: 4 },
+      { id: "ddd",      name: "Domain-Driven Design",   category: "methodology", level: "proficient", yearsOfExperience: 3 },
+      { id: "a11y",     name: "Accesibilidad Web",      category: "methodology", level: "proficient", yearsOfExperience: 3 },
     ],
   },
 ];

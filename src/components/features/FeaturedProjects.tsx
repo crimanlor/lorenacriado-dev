@@ -16,9 +16,9 @@ export async function FeaturedProjects() {
   return (
     <Section id="projects" bg="secondary" spacing="lg">
       <SectionHeader
-        eyebrow="Work"
-        heading="Featured Projects"
-        subheading="A selection of projects I'm proud of — from enterprise platforms to open-source tools."
+        eyebrow="Trabajo"
+        heading="Proyectos destacados"
+        subheading="Una selección de proyectos de los que me siento orgullosa — desde plataformas enterprise hasta herramientas open-source."
         align="center"
       />
 
@@ -26,7 +26,7 @@ export async function FeaturedProjects() {
       <ul
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         role="list"
-        aria-label="Featured projects"
+        aria-label="Proyectos destacados"
       >
         {projects.map((project) => (
           <li key={project.id}>
@@ -44,9 +44,9 @@ export async function FeaturedProjects() {
             "hover:gap-3 transition-all duration-200",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm",
           ].join(" ")}
-          aria-label="View all projects"
+          aria-label="Ver todos los proyectos"
         >
-          View all projects
+          Ver todos los proyectos
           <ArrowRight size={16} aria-hidden="true" />
         </Link>
       </div>

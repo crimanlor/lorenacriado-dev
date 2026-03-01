@@ -50,7 +50,7 @@ export function MobileMenu({ navItems }: MobileMenuProps) {
       <button
         onClick={() => setIsOpen((v) => !v)}
         aria-expanded={isOpen}
-        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
         aria-controls="mobile-menu"
         className={[
           "p-2 rounded-md text-content-secondary hover:text-content hover:bg-surface-secondary",
@@ -76,7 +76,7 @@ export function MobileMenu({ navItems }: MobileMenuProps) {
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
-            aria-label="Mobile navigation"
+            aria-label="Navegación móvil"
             className={[
               "fixed top-16 left-0 right-0 z-50",
               "bg-surface border-b border-border shadow-card-hover",

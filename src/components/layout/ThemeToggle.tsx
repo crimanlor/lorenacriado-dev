@@ -39,7 +39,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+      aria-label={`Cambiar a modo ${theme === "light" ? "oscuro" : "claro"}`}
       className={[
         "p-2 rounded-md text-content-secondary hover:text-content hover:bg-surface-secondary",
         "transition-colors duration-200",

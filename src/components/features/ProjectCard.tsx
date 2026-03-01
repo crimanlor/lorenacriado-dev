@@ -17,9 +17,9 @@ interface ProjectCardProps {
 }
 
 const statusConfig = {
-  live:     { label: "Live",     variant: "success"  as const },
-  wip:      { label: "In Progress", variant: "warning" as const },
-  archived: { label: "Archived", variant: "default"  as const },
+  live:     { label: "En producción", variant: "success"  as const },
+  wip:      { label: "En progreso",   variant: "warning" as const },
+  archived: { label: "Archivado",     variant: "default"  as const },
 };
 
 // Maps tag color names to Tailwind background + text classes
@@ -45,7 +45,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="relative h-48 rounded-t-card overflow-hidden bg-surface-secondary">
         <Image
           src={project.imageUrl}
-          alt={`Screenshot of ${project.title}`}
+                  alt={`Captura de pantalla de ${project.title}`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -74,7 +74,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-auto" aria-label="Technologies used">
+          <div className="flex flex-wrap gap-2 mt-auto" aria-label="Tecnologías utilizadas">
           {project.tags.map((tag) => (
             <span
               key={tag.label}
@@ -96,7 +96,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View ${project.title} source code on GitHub`}
+            aria-label={`Ver código fuente de ${project.title} en GitHub`}
             className={[
               "flex items-center gap-1.5 text-label-sm text-content-secondary",
               "hover:text-content transition-colors duration-200",
@@ -104,7 +104,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             ].join(" ")}
           >
             <Github size={15} aria-hidden="true" />
-            Source
+            Código
           </a>
         )}
         {project.liveUrl && (
@@ -112,7 +112,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Visit ${project.title} live site`}
+            aria-label={`Visitar el sitio en producción de ${project.title}`}
             className={[
               "flex items-center gap-1.5 text-label-sm text-accent",
               "hover:text-accent-hover transition-colors duration-200",
@@ -120,7 +120,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             ].join(" ")}
           >
             <ExternalLink size={15} aria-hidden="true" />
-            Live Demo
+            Ver demo
           </a>
         )}
       </Card.Footer>

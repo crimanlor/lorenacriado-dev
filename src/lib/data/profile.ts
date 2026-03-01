@@ -1,35 +1,30 @@
 /**
  * Static Data — Profile
- *
- * Simulates a CMS response. The shape mirrors what a Notion page property
- * object or a Contentful entry would return after normalization.
- *
- * To migrate to a real CMS:
- *  1. Create /lib/data/notion/profile.ts (or /contentful/profile.ts)
- *  2. Fetch + normalize the remote data into the same `Profile` type
- *  3. Swap the import in /lib/data/index.ts — zero changes elsewhere
  */
 
 import type { Profile } from "@/domain/types";
 import { asUrl } from "@/domain/types";
 
 export const profileData: Profile = {
-  name: "Lorena Criado Manzaneque",
-  title: "Full-Stack Engineer",
+  name: "Lorena Criado",
+  title: "Full-Stack Developer",
   tagline:
-    "I build scalable web applications with clean architecture, great UX, and production-grade reliability.",
-  bio: `I'm a full-stack engineer passionate about the intersection of clean code, 
-developer experience, and user-centric design. I work across the entire stack — 
-from crafting accessible React interfaces to designing resilient Node.js APIs and 
-cloud-native infrastructure. I care deeply about code quality, team collaboration, 
-and shipping software that makes a real difference.`,
-  location: "Spain",
-  avatarUrl: asUrl("https://avatars.githubusercontent.com/u/0"),
+    "Desarrollo software escalable y accesible, enfocado en la optimización de procesos y la creación de documentación técnica eficiente. Colaboro activamente con la comunidad tecnológica a través de iniciativas de inclusión y educación.",
+  bio: `Desarrolladora Full Stack con experiencia en la construcción de soluciones web, diseño UX/UI y procesos de QA.
+Actualmente trabajo como Technical Consultant en DigitalResponse, donde participo en la transformación de requerimientos de negocio en implementaciones técnicas que mejoran la experiencia de usuario, automatizan flujos de trabajo y optimizan procesos internos.
+
+Contribuyo a la generación de documentación funcional y técnica de sistemas internos, fomentando la mantenibilidad y la transferencia de conocimiento entre equipos.
+
+Continúo desarrollando mis habilidades en desarrollo web con el objetivo de crear productos digitales escalables y centrados en las personas.
+
+Colaboro activamente con SomosCoders, apoyando iniciativas de inclusión tecnológica.`,
+  location: "Barcelona, España",
+  avatarUrl: asUrl("/images/lorenacriado.jpg"),
   resumeUrl: asUrl("/resume.pdf"),
   social: [
     {
       platform: "github",
-      url: asUrl("https://github.com/lorena-criado"),
+      url: asUrl("https://github.com/crimanlor"),
       label: "GitHub",
     },
     {

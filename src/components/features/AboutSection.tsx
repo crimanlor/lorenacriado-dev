@@ -21,7 +21,7 @@ export async function AboutSection() {
       <div className="grid lg:grid-cols-2 gap-16">
         {/* Bio */}
         <div>
-          <SectionHeader eyebrow="About" heading="Who I Am" />
+          <SectionHeader eyebrow="Sobre mí" heading="Quién soy" />
           <div className="space-y-4">
             {profile.bio.split("\n").filter(Boolean).map((paragraph, i) => (
               <p key={i} className="text-body-lg text-content-secondary leading-relaxed">
@@ -33,7 +33,7 @@ export async function AboutSection() {
 
         {/* Experience timeline */}
         <div>
-          <SectionHeader eyebrow="Experience" heading="Work History" />
+          <SectionHeader eyebrow="Experiencia" heading="Trayectoria" />
           <ol className="relative border-l border-border space-y-10 ml-4" role="list">
             {experiences.map((exp, index) => (
               <li key={exp.id} className="ml-6">
@@ -58,7 +58,7 @@ export async function AboutSection() {
                   {exp.endDate ? (
                     <time dateTime={exp.endDate}>{formatDate(exp.endDate)}</time>
                   ) : (
-                    <span className="text-accent font-medium">Present</span>
+                    <span className="text-accent font-medium">Actualidad</span>
                   )}
                 </div>
 
@@ -88,7 +88,7 @@ export async function AboutSection() {
                 </p>
 
                 {/* Highlights */}
-                <ul className="space-y-1.5" role="list" aria-label="Key highlights">
+                <ul className="space-y-1.5" role="list" aria-label="Aspectos destacados">
                   {exp.highlights.map((h, i) => (
                     <li
                       key={i}

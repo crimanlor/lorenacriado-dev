@@ -10,9 +10,9 @@ import { getSkillGroups } from "@/lib/data";
 import type { SkillLevel } from "@/domain/types";
 
 const levelConfig: Record<SkillLevel, { label: string; width: string; color: string }> = {
-  learning:   { label: "Learning",   width: "w-1/3",  color: "bg-yellow-400" },
-  proficient: { label: "Proficient", width: "w-2/3",  color: "bg-blue-500" },
-  expert:     { label: "Expert",     width: "w-full", color: "bg-accent" },
+  learning:   { label: "Aprendiendo", width: "w-1/3",  color: "bg-yellow-400" },
+  proficient: { label: "Competente",  width: "w-2/3",  color: "bg-blue-500" },
+  expert:     { label: "Experta",     width: "w-full", color: "bg-accent" },
 };
 
 export async function SkillsSection() {
@@ -23,7 +23,7 @@ export async function SkillsSection() {
       <SectionHeader
         eyebrow="Expertise"
         heading="Skills & Technologies"
-        subheading="Technologies I work with daily, categorized by domain."
+        subheading="Tecnologías con las que trabajo a diario, organizadas por dominio."
         align="center"
       />
 

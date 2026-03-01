@@ -20,7 +20,7 @@ export async function Footer() {
     <footer
       className="bg-surface-secondary border-t border-border"
       role="contentinfo"
-      aria-label="Site footer"
+      aria-label="Pie de página"
     >
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -35,7 +35,7 @@ export async function Footer() {
           </div>
 
           {/* Social links */}
-          <nav aria-label="Social media links">
+          <nav             aria-label="Redes sociales">
             <ul className="flex items-center gap-4" role="list">
               {profile.social.map((link) => {
                 const Icon = iconMap[link.platform] ?? ExternalLink;
@@ -45,7 +45,7 @@ export async function Footer() {
                       href={link.url}
                       target={link.platform !== "email" ? "_blank" : undefined}
                       rel={link.platform !== "email" ? "noopener noreferrer" : undefined}
-                      aria-label={`${profile.name} on ${link.label}`}
+                      aria-label={`${profile.name} en ${link.label}`}
                       className={[
                         "p-2 rounded-md text-content-tertiary hover:text-accent",
                         "transition-colors duration-200",
@@ -67,7 +67,7 @@ export async function Footer() {
             © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
           <p className="text-body-sm text-content-tertiary">
-            Built with{" "}
+            Construido con{" "}
             <a
               href="https://nextjs.org"
               target="_blank"

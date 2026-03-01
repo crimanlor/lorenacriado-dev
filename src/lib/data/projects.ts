@@ -13,11 +13,11 @@ export const projectsData: ReadonlyArray<Project> = [
   {
     id: "p-001",
     slug: "enterprise-saas-platform",
-    title: "Enterprise SaaS Platform",
+    title: "Plataforma SaaS Enterprise",
     description:
-      "Multi-tenant SaaS platform with real-time collaboration, role-based access control, and usage analytics dashboard.",
+      "Plataforma SaaS multi-tenant con colaboración en tiempo real, control de acceso por roles y panel de analíticas de uso.",
     longDescription:
-      "Built a full-stack multi-tenant SaaS platform serving 200+ enterprise clients. Architected a microservices backend with Node.js and PostgreSQL, a React frontend with real-time updates via WebSockets, and a CI/CD pipeline on AWS. Implemented RBAC, SSO via OAuth2, and a comprehensive analytics dashboard.",
+      "Construí una plataforma SaaS multi-tenant full-stack para más de 200 clientes enterprise. Arquitecté un backend de microservicios con Node.js y PostgreSQL, un frontend React con actualizaciones en tiempo real via WebSockets y un pipeline CI/CD en AWS. Implementé RBAC, SSO via OAuth2 y un panel de analíticas completo.",
     imageUrl: asUrl("/images/projects/saas-platform.png"),
     tags: [
       { label: "Next.js", color: "slate" },
@@ -36,11 +36,11 @@ export const projectsData: ReadonlyArray<Project> = [
   {
     id: "p-002",
     slug: "developer-cli-toolkit",
-    title: "Developer CLI Toolkit",
+    title: "Toolkit CLI para Desarrolladores",
     description:
-      "Open-source CLI tool that automates project scaffolding, code generation, and team workflow standardization.",
+      "Herramienta CLI open-source que automatiza el scaffolding de proyectos, la generación de código y la estandarización de flujos de trabajo en equipo.",
     longDescription:
-      "A Node.js CLI distributed via npm that helps teams scaffold projects with opinionated templates, enforce coding standards, and automate repetitive tasks. Used by 500+ developers.",
+      "Una CLI Node.js distribuida via npm que ayuda a los equipos a crear proyectos con plantillas predefinidas, aplicar estándares de código y automatizar tareas repetitivas. Utilizada por más de 500 desarrolladores.",
     imageUrl: asUrl("/images/projects/cli-toolkit.png"),
     tags: [
       { label: "Node.js", color: "green" },
@@ -58,11 +58,11 @@ export const projectsData: ReadonlyArray<Project> = [
   {
     id: "p-003",
     slug: "design-system",
-    title: "Component Design System",
+    title: "Sistema de Diseño de Componentes",
     description:
-      "Accessible, themeable React component library with Storybook documentation and automated visual regression tests.",
+      "Librería de componentes React accesible y con soporte de temas, con documentación en Storybook y tests de regresión visual automatizados.",
     longDescription:
-      "Designed and built a production-grade component library following WCAG 2.1 AA standards. Features 60+ components, automated accessibility testing with axe-core, and a token-based theming system.",
+      "Diseñé y construí una librería de componentes de nivel producción siguiendo los estándares WCAG 2.1 AA. Incluye más de 60 componentes, tests de accesibilidad automatizados con axe-core y un sistema de temas basado en tokens.",
     imageUrl: asUrl("/images/projects/design-system.png"),
     tags: [
       { label: "React", color: "sky" },
@@ -79,11 +79,11 @@ export const projectsData: ReadonlyArray<Project> = [
   {
     id: "p-004",
     slug: "realtime-api",
-    title: "Real-time Collaboration API",
+    title: "API de Colaboración en Tiempo Real",
     description:
-      "GraphQL API with WebSocket subscriptions powering real-time document collaboration for up to 1,000 concurrent users.",
+      "API GraphQL con suscripciones WebSocket para colaboración en documentos en tiempo real para hasta 1.000 usuarios concurrentes.",
     longDescription:
-      "Architected and deployed a GraphQL API with real-time capabilities using Apollo Server and Redis Pub/Sub. Handles concurrent editing with Operational Transformation and CRDT algorithms.",
+      "Arquitecté y despleguéuna API GraphQL con capacidades en tiempo real usando Apollo Server y Redis Pub/Sub. Gestiona la edición concurrente con algoritmos de Transformación Operacional y CRDT.",
     imageUrl: asUrl("/images/projects/realtime-api.png"),
     tags: [
       { label: "GraphQL", color: "pink" },
@@ -100,11 +100,11 @@ export const projectsData: ReadonlyArray<Project> = [
   {
     id: "p-005",
     slug: "portfolio-v2",
-    title: "Personal Portfolio v2",
+    title: "Portfolio Personal v2",
     description:
-      "This very portfolio — built with Next.js 14, enterprise-style Clean Architecture, and full accessibility compliance.",
+      "Este mismo portfolio — construido con Next.js 14, arquitectura limpia de nivel enterprise y cumplimiento completo de accesibilidad.",
     longDescription:
-      "A production-grade personal portfolio built with Next.js 14 App Router, Clean Architecture, design tokens, WCAG 2.1 AA accessibility, and comprehensive performance optimization.",
+      "Un portfolio personal de nivel producción construido con Next.js 14 App Router, arquitectura limpia, tokens de diseño, accesibilidad WCAG 2.1 AA y optimización de rendimiento completa.",
     imageUrl: asUrl("/images/projects/portfolio.png"),
     tags: [
       { label: "Next.js 14", color: "slate" },

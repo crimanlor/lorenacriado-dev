@@ -37,7 +37,7 @@ export async function Header() {
           "focus:text-label-md focus:outline-none",
         ].join(" ")}
       >
-        Skip to main content
+        Saltar al contenido principal
       </a>
 
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export async function Header() {
               "hover:text-accent transition-colors duration-200",
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm",
             ].join(" ")}
-            aria-label={`${profile.name} — home`}
+            aria-label={`${profile.name} — inicio`}
           >
             <span className="text-accent">{"{"}</span>
             {profile.name.split(" ")[0]}
@@ -59,7 +59,7 @@ export async function Header() {
 
           {/* Desktop navigation */}
           <nav
-            aria-label="Main navigation"
+            aria-label="Navegación principal"
             className="hidden md:flex items-center gap-1"
           >
             {navItems.map((item) => (

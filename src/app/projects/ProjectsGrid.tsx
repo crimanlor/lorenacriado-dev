@@ -23,11 +23,11 @@ interface ProjectsGridProps {
 type FilterValue = ProjectCategory | "all";
 
 const FILTERS: Array<{ value: FilterValue; label: string }> = [
-  { value: "all",       label: "All" },
+  { value: "all",       label: "Todos" },
   { value: "fullstack", label: "Full-Stack" },
   { value: "frontend",  label: "Frontend" },
   { value: "backend",   label: "Backend" },
-  { value: "tool",      label: "Tools" },
+  { value: "tool",      label: "Herramientas" },
   { value: "oss",       label: "Open Source" },
 ];
 
@@ -47,7 +47,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
       {/* Filter tabs */}
       <div
         role="tablist"
-        aria-label="Filter projects by category"
+        aria-label="Filtrar proyectos por categoría"
         className="flex flex-wrap gap-2 mb-10"
       >
         {FILTERS.map(({ value, label }) => (
@@ -76,21 +76,21 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 
       {/* Result count (screen reader) */}
       <p className="sr-only" aria-live="polite" aria-atomic="true">
-        Showing {filtered.length} project{filtered.length !== 1 ? "s" : ""}
-        {activeFilter !== "all" ? ` in ${activeFilter}` : ""}
+        Mostrando {filtered.length} proyecto{filtered.length !== 1 ? "s" : ""}
+        {activeFilter !== "all" ? ` en ${activeFilter}` : ""}
       </p>
 
       {filtered.length === 0 ? (
         <div className="text-center py-section-sm">
           <p className="text-body-lg text-content-secondary">
-            No projects in this category yet.
+            No hay proyectos en esta categoría todavía.
           </p>
         </div>
       ) : (
         <ul
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           role="list"
-          aria-label="Projects list"
+          aria-label="Lista de proyectos"
         >
           {filtered.map((project) => (
             <li key={project.id}>

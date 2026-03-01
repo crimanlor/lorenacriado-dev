@@ -12,12 +12,12 @@ export const experienceData: ReadonlyArray<Experience> = [
     role: "Senior Full-Stack Engineer",
     startDate: asISODate("2022-03-01"),
     description:
-      "Led architecture and development of a multi-tenant SaaS platform serving 200+ enterprise clients across Europe.",
+      "Lideré la arquitectura y el desarrollo de una plataforma SaaS multi-tenant para más de 200 clientes enterprise en Europa.",
     highlights: [
-      "Reduced API response times by 60% through query optimization and caching strategies",
-      "Migrated monolith to microservices, improving deployment frequency from monthly to daily",
-      "Mentored a team of 4 junior engineers and established code review standards",
-      "Shipped an accessible component library adopted by 3 internal product teams",
+      "Reduje los tiempos de respuesta de la API en un 60% mediante optimización de consultas y estrategias de caché",
+      "Migré el monolito a microservicios, aumentando la frecuencia de despliegue de mensual a diaria",
+      "Mentoricé a un equipo de 4 ingenieros junior y establecí los estándares de revisión de código",
+      "Entregué una librería de componentes accesible adoptada por 3 equipos de producto internos",
     ],
     technologies: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Docker"],
     companyUrl: asUrl("https://techcorp.example.com"),
@@ -29,11 +29,11 @@ export const experienceData: ReadonlyArray<Experience> = [
     startDate: asISODate("2020-06-01"),
     endDate: asISODate("2022-02-28"),
     description:
-      "Joined as employee #8 and helped grow the engineering team and product from MVP to Series A.",
+      "Me incorporé como empleada número 8 y ayudé a crecer al equipo de ingeniería y al producto desde el MVP hasta la Serie A.",
     highlights: [
-      "Built the core real-time collaboration feature that became the product's key differentiator",
-      "Implemented end-to-end testing pipeline reducing bug escape rate by 40%",
-      "Integrated third-party payment system processing €500K+ monthly",
+      "Construí la funcionalidad central de colaboración en tiempo real que se convirtió en el diferenciador clave del producto",
+      "Implementé un pipeline de tests end-to-end que redujo la tasa de escape de bugs en un 40%",
+      "Integré un sistema de pagos de terceros que procesaba más de 500.000 € mensuales",
     ],
     technologies: ["React", "Express", "MongoDB", "WebSocket", "Stripe", "Heroku"],
     companyUrl: asUrl("https://startupxyz.example.com"),
@@ -45,11 +45,11 @@ export const experienceData: ReadonlyArray<Experience> = [
     startDate: asISODate("2018-09-01"),
     endDate: asISODate("2020-05-31"),
     description:
-      "Developed responsive, accessible web applications for clients across finance, healthcare, and e-commerce sectors.",
+      "Desarrollé aplicaciones web responsive y accesibles para clientes de los sectores financiero, sanitario y e-commerce.",
     highlights: [
-      "Delivered 15+ client projects on schedule with an average satisfaction score of 4.8/5",
-      "Championed accessibility standards adoption — all projects shipped WCAG 2.1 AA compliant",
-      "Introduced automated performance budgets reducing average page load by 35%",
+      "Entregué más de 15 proyectos de cliente en plazo con una puntuación media de satisfacción de 4,8/5",
+      "Impulsé la adopción de estándares de accesibilidad — todos los proyectos se entregaron cumpliendo WCAG 2.1 AA",
+      "Introduje presupuestos de rendimiento automatizados que redujeron el tiempo medio de carga de página en un 35%",
     ],
     technologies: ["React", "TypeScript", "Sass", "Jest", "Webpack"],
     companyUrl: asUrl("https://digitalagency.example.com"),
@@ -60,18 +60,18 @@ export const educationData: ReadonlyArray<Education> = [
   {
     id: "edu-001",
     institution: "Universidad Complutense de Madrid",
-    degree: "Bachelor's Degree",
-    field: "Computer Science",
+    degree: "Grado",
+    field: "Ingeniería Informática",
     startDate: asISODate("2014-09-01"),
     endDate: asISODate("2018-06-30"),
     description:
-      "Specialized in software engineering, algorithms, and distributed systems. Final project: distributed key-value store with consensus protocol.",
+      "Especialización en ingeniería del software, algoritmos y sistemas distribuidos. Proyecto final: almacén de clave-valor distribuido con protocolo de consenso.",
   },
   {
     id: "edu-002",
     institution: "Online — Coursera / AWS Training",
-    degree: "Professional Certifications",
-    field: "Cloud Architecture & Solutions",
+    degree: "Certificaciones Profesionales",
+    field: "Arquitectura Cloud",
     startDate: asISODate("2021-01-01"),
     endDate: asISODate("2021-12-31"),
     description:

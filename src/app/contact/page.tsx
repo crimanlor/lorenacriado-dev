@@ -9,9 +9,9 @@ import type React from "react";
 import { ContactSection } from "@/components/features/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contacto",
   description:
-    "Get in touch with Lorena Criado Manzaneque — available for full-stack engineering roles and interesting projects.",
+    "Ponte en contacto con Lorena Criado Manzaneque — disponible para roles de ingeniería full-stack y proyectos interesantes.",
 };
 
 const ContactSectionComponent =
@@ -27,16 +27,16 @@ export default function ContactPage() {
       >
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-label-md text-accent uppercase tracking-widest mb-3">
-            Get In Touch
+            Contacto
           </p>
           <h1
             id="contact-page-heading"
             className="text-display-lg text-content mb-4"
           >
-            Contact
+            Hablemos
           </h1>
           <p className="text-body-xl text-content-secondary max-w-prose-lg">
-            I&apos;d love to hear about your project, team, or just say hello.
+            Me encantaría conocer tu proyecto, tu equipo, o simplemente decirme hola.
           </p>
         </div>
       </section>

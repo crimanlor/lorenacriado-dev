@@ -23,10 +23,10 @@ import { experienceData, educationData } from "./experience";
 
 // Navigation items — defined here as they are layout-level config
 const navItems: ReadonlyArray<NavItem> = [
-  { label: "About",    href: "/about" },
-  { label: "Projects", href: "/projects" },
-  { label: "Skills",   href: "/#skills" },
-  { label: "Contact",  href: "/contact" },
+  { label: "Sobre mí",  href: "/about" },
+  { label: "Proyectos", href: "/projects" },
+  { label: "Skills",    href: "/#skills" },
+  { label: "Contacto",  href: "/contact" },
 ];
 
 const contactInfo: ContactInfo = {

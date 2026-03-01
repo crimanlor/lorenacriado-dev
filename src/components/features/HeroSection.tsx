@@ -1,15 +1,6 @@
 /**
  * HeroSection — Above-the-fold introduction
  *
- * Performance decisions:
- * - Server Component: zero client JS, renders at build time
- * - Profile image uses Next/Image with priority=true (LCP element)
- * - Animated elements use CSS animations (no JS animation libraries)
- *
- * Accessibility:
- * - Heading hierarchy starts at h1 (only one h1 per page)
- * - Decorative elements are aria-hidden
- * - CTA buttons have descriptive labels
  */
 
 import Image from "next/image";
@@ -37,20 +28,20 @@ export async function HeroSection() {
           {/* Text content */}
           <div className="space-y-8 animate-fade-in-up">
             {/* Availability badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-pill bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-pill bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800">
               <span
                 className="w-2 h-2 bg-green-500 rounded-full animate-pulse"
                 aria-hidden="true"
               />
               <span className="text-label-sm text-green-700 dark:text-green-400">
-                Available for new opportunities
+                Disponible para nuevas oportunidades
               </span>
-            </div>
+            </div> */}
 
             {/* Main heading */}
             <div className="space-y-3">
               <p className="text-label-lg text-accent uppercase tracking-widest">
-                Hello, I&apos;m
+                Hola 👋🏻, soy
               </p>
               <h1
                 id="hero-heading"
@@ -80,9 +71,9 @@ export async function HeroSection() {
                 size="lg"
                 variant="primary"
                 rightIcon={<ArrowRight size={18} aria-hidden="true" />}
-                aria-label="View my projects portfolio"
-              >
-                <Link href="/projects">View My Work</Link>
+                  aria-label="Ver mi portfolio de proyectos"
+                >
+                  <Link href="/projects">Ver mi trabajo</Link>
               </Button>
 
               {profile.resumeUrl && (
@@ -90,10 +81,10 @@ export async function HeroSection() {
                   size="lg"
                   variant="outline"
                   leftIcon={<Download size={18} aria-hidden="true" />}
-                  aria-label="Download Lorena's resume PDF"
+                  aria-label="Descargar el currículum de Lorena en PDF"
                 >
                   <a href={profile.resumeUrl} download>
-                    Download Resume
+                    Descargar CV
                   </a>
                 </Button>
               )}
@@ -111,7 +102,7 @@ export async function HeroSection() {
               <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-surface shadow-glow">
                 <Image
                   src={profile.avatarUrl}
-                  alt={`Portrait of ${profile.name}`}
+                  alt={`Foto de ${profile.name}`}
                   fill
                   sizes="(max-width: 1024px) 288px, 320px"
                   className="object-cover"

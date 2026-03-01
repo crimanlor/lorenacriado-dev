@@ -10,9 +10,9 @@ import { getAllProjects } from "@/lib/data";
 import { ProjectsGrid } from "./ProjectsGrid";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Proyectos",
   description:
-    "Explore Lorena Criado's portfolio of full-stack projects — from enterprise SaaS platforms to open-source tools.",
+    "Explora el portfolio de proyectos full-stack de Lorena Criado — desde plataformas SaaS empresariales hasta herramientas open-source.",
 };
 
 export default async function ProjectsPage() {
@@ -33,11 +33,10 @@ export default async function ProjectsPage() {
             id="projects-page-heading"
             className="text-display-lg text-content mb-4"
           >
-            Projects
+            Proyectos
           </h1>
           <p className="text-body-xl text-content-secondary max-w-prose-lg">
-            A collection of projects I&apos;ve built — from production-grade enterprise
-            software to personal experiments and open-source contributions.
+            Una selección de proyectos que he desarrollado — desde software empresarial en producción hasta experimentos personales y contribuciones open-source.
           </p>
         </div>
       </section>

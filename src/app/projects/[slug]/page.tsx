@@ -61,10 +61,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             "hover:text-content transition-colors duration-200",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm",
           ].join(" ")}
-          aria-label="Back to all projects"
+          aria-label="Volver a todos los proyectos"
         >
           <ArrowLeft size={16} aria-hidden="true" />
-          All Projects
+          Todos los proyectos
         </Link>
       </div>
 
@@ -73,7 +73,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         <div className="relative h-64 md:h-96 rounded-card overflow-hidden bg-surface-secondary">
           <Image
             src={project.imageUrl}
-            alt={`Screenshot of ${project.title}`}
+            alt={`Captura de pantalla de ${project.title}`}
             fill
             sizes="(max-width: 1280px) 100vw, 1200px"
             className="object-cover"
@@ -104,10 +104,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 }
               >
                 {project.status === "live"
-                  ? "Live"
+                  ? "En producción"
                   : project.status === "wip"
-                  ? "In Progress"
-                  : "Archived"}
+                  ? "En progreso"
+                  : "Archivado"}
               </Badge>
             </div>
 
@@ -129,7 +129,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           {/* Sidebar */}
           <aside
             className="space-y-6"
-            aria-label="Project details"
+            aria-label="Detalles del proyecto"
           >
             {/* Actions */}
             <div className="space-y-3">
@@ -139,7 +139,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
-                  aria-label={`Visit ${project.title} live site`}
+                  aria-label={`Visitar el sitio en producción de ${project.title}`}
                 >
                   <Button
                     variant="primary"
@@ -147,7 +147,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     leftIcon={<ExternalLink size={16} aria-hidden="true" />}
                     className="w-full justify-center"
                   >
-                    View Live Demo
+                    Ver demo en producción
                   </Button>
                 </a>
               )}
@@ -157,7 +157,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
-                  aria-label={`View ${project.title} source code on GitHub`}
+                  aria-label={`Ver el código fuente de ${project.title} en GitHub`}
                 >
                   <Button
                     variant="outline"
@@ -165,7 +165,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     leftIcon={<Github size={16} aria-hidden="true" />}
                     className="w-full justify-center"
                   >
-                    Source Code
+                    Código fuente
                   </Button>
                 </a>
               )}
@@ -175,7 +175,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <div className="p-5 bg-surface-secondary rounded-card border border-border space-y-4">
               <div>
                 <p className="text-label-sm text-content-tertiary uppercase tracking-wider mb-1">
-                  Published
+                  Publicado
                 </p>
                 <div className="flex items-center gap-1.5 text-body-sm text-content">
                   <Calendar size={13} aria-hidden="true" />
@@ -187,9 +187,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
               <div>
                 <p className="text-label-sm text-content-tertiary uppercase tracking-wider mb-2">
-                  Technologies
+                  Tecnologías
                 </p>
-                <div className="flex flex-wrap gap-2" aria-label="Technologies used">
+                <div className="flex flex-wrap gap-2" aria-label="Tecnologías utilizadas">
                   {project.tags.map((tag) => (
                     <span
                       key={tag.label}
