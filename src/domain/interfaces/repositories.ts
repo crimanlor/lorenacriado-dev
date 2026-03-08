@@ -21,6 +21,7 @@ import type {
   SkillGroup,
   Experience,
   Education,
+  VolunteerExperience,
   ContactInfo,
   NavItem,
 } from "@/domain/types";
@@ -41,6 +42,10 @@ export interface ISkillRepository {
 
 export interface IExperienceRepository {
   getExperiences(): Promise<ReadonlyArray<Experience>>;
+}
+
+export interface IVolunteerRepository {
+  getVolunteerExperiences(): Promise<ReadonlyArray<VolunteerExperience>>;
 }
 
 export interface IEducationRepository {
@@ -64,6 +69,7 @@ export interface IPortfolioRepository
     IProjectRepository,
     ISkillRepository,
     IExperienceRepository,
+    IVolunteerRepository,
     IEducationRepository,
     IContactRepository,
     INavigationRepository {}

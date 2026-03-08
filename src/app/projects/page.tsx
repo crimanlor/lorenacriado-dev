@@ -12,7 +12,7 @@ import { ProjectsGrid } from "./ProjectsGrid";
 export const metadata: Metadata = {
   title: "Proyectos",
   description:
-    "Explora el portfolio de proyectos full-stack de Lorena Criado — desde plataformas SaaS empresariales hasta herramientas open-source.",
+    "Explora el portfolio de proyectos full-stack de Lorena Criado Manzaneque.",
 };
 
 export default async function ProjectsPage() {
@@ -36,7 +36,7 @@ export default async function ProjectsPage() {
             Proyectos
           </h1>
           <p className="text-body-xl text-content-secondary max-w-prose-lg">
-            Una selección de proyectos que he desarrollado — desde software empresarial en producción hasta experimentos personales y contribuciones open-source.
+            Una selección de proyectos personales y contribuciones open-source que he desarrollado, impulsada por mi curiosidad técnica y el interés constante en aprender, siempre buscando crear software con buena experiencia de usuario, aplicando buenas prácticas de código y generando documentación para perfiles técnicos y usuarios. 
           </p>
         </div>
       </section>

@@ -2,57 +2,73 @@
  * Static Data — Experience & Education
  */
 
-import type { Experience, Education } from "@/domain/types";
+import type { Experience, Education, VolunteerExperience } from "@/domain/types";
 import { asUrl, asISODate } from "@/domain/types";
 
 export const experienceData: ReadonlyArray<Experience> = [
   {
     id: "exp-001",
-    company: "TechCorp Global",
-    role: "Senior Full-Stack Engineer",
-    startDate: asISODate("2022-03-01"),
+    company: "DigitalResponse",
+    role: "Technical Consultant",
+    startDate: asISODate("2025-02-01"),
     description:
-      "Lideré la arquitectura y el desarrollo de una plataforma SaaS multi-tenant para más de 200 clientes enterprise en Europa.",
+      "Transformo necesidades de negocio en soluciones técnicas, desarrollando y optimizando funcionalidades para mejorar la experiencia del cliente y la eficiencia de los procesos.",
     highlights: [
-      "Reduje los tiempos de respuesta de la API en un 60% mediante optimización de consultas y estrategias de caché",
-      "Migré el monolito a microservicios, aumentando la frecuencia de despliegue de mensual a diaria",
-      "Mentoricé a un equipo de 4 ingenieros junior y establecí los estándares de revisión de código",
-      "Entregué una librería de componentes accesible adoptada por 3 equipos de producto internos",
+      "Colaboro con negocio para implementar mejoras en la plataforma, enfocándome en la escalabilidad, el rendimiento y la accesibilidad.",
+      "Contribuyo a la automatización y centralización de flujos de trabajo, reduciendo tareas manuales y optimizando la operativa interna.",
+      "Elaboro y mantengo documentación funcional y técnica de aplicaciones, configuraciones y procesos, promoviendo la transversalidad del conocimiento dentro del equipo.",
+      "Brindo soporte en la gestión de reportes de usuarios, análisis de incidencias y configuración de plataformas, asegurando la estabilidad y calidad del servicio.",
+      "Gestiono y mantengo la web corporativa, participando en la toma de decisiones técnicas y funcionales sobre su evolución y mejoras."
     ],
-    technologies: ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Docker"],
-    companyUrl: asUrl("https://techcorp.example.com"),
+    technologies: ["Vue.js", "TypeScript", "Python", "Flask", "MongoDB", "Redis", "Docker", "WordPress"],
+    companyUrl: asUrl("https://www.digitalresponse.es/"),
   },
   {
     id: "exp-002",
-    company: "StartupXYZ",
-    role: "Full-Stack Engineer",
-    startDate: asISODate("2020-06-01"),
-    endDate: asISODate("2022-02-28"),
+    company: "DigitalResponse",
+    role: "Email Developer",
+    startDate: asISODate("2021-11-01"),
+    endDate: asISODate("2025-02-01"),
     description:
-      "Me incorporé como empleada número 8 y ayudé a crecer al equipo de ingeniería y al producto desde el MVP hasta la Serie A.",
+      "Guié al equipo de maquetación del proyecto Customer Journeys de CaixaBank, aplicando metodologías ágiles para optimizar los procesos colaborativos y mejorar la comunicación entre equipos, logrando un aumento del 25% en la productividad en un periodo de 6 meses.",
     highlights: [
-      "Construí la funcionalidad central de colaboración en tiempo real que se convirtió en el diferenciador clave del producto",
-      "Implementé un pipeline de tests end-to-end que redujo la tasa de escape de bugs en un 40%",
-      "Integré un sistema de pagos de terceros que procesaba más de 500.000 € mensuales",
+      "Contribuí al desarrollo y automatización de promociones e hiperpersonalizaciones mediante la implementación de soluciones con JavaScript, reduciendo en un 30% el tiempo de ejecución de las campañas.",
+      "Promoví la creación y estandarización de documentación de Procedimientos Operativos Estándar (SOP), mejorando los procesos de onboarding y reduciendo riesgos en la transferencia de conocimiento."
     ],
-    technologies: ["React", "Express", "MongoDB", "WebSocket", "Stripe", "Heroku"],
-    companyUrl: asUrl("https://startupxyz.example.com"),
+    technologies: ["HTML/CSS", "Javascript"],
+    companyUrl: asUrl("https://www.digitalresponse.es/"),
   },
   {
     id: "exp-003",
-    company: "DigitalAgency",
-    role: "Frontend Developer",
-    startDate: asISODate("2018-09-01"),
-    endDate: asISODate("2020-05-31"),
+    company: "Nokues",
+    role: "Full Stack Developer",
+    startDate: asISODate("2021-03-01"),
+    endDate: asISODate("2021-10-31"),
     description:
-      "Desarrollé aplicaciones web responsive y accesibles para clientes de los sectores financiero, sanitario y e-commerce.",
+      "Participé en el desarrollo de una aplicación web aplicando Test Driven Development (TDD), contribuyendo a mejorar la calidad del producto, la experiencia de usuario y la satisfacción del cliente en un 40%.",
     highlights: [
-      "Entregué más de 15 proyectos de cliente en plazo con una puntuación media de satisfacción de 4,8/5",
-      "Impulsé la adopción de estándares de accesibilidad — todos los proyectos se entregaron cumpliendo WCAG 2.1 AA",
-      "Introduje presupuestos de rendimiento automatizados que redujeron el tiempo medio de carga de página en un 35%",
+      "Formé parte de un equipo autogestionado bajo metodología Scrum, participando en el desarrollo iterativo del MVP mediante ciclos de diseño, desarrollo y validación del producto.",
+      "Contribuí a la optimización de la experiencia de usuario y los flujos de trabajo, logrando un incremento del 35% en la eficiencia de los procesos.",
     ],
-    technologies: ["React", "TypeScript", "Sass", "Jest", "Webpack"],
-    companyUrl: asUrl("https://digitalagency.example.com"),
+    technologies: ["Nuxt.js", "TypeScript", "Javascript", "Symfony", "PHP", "AWS", "Docker"],
+    companyUrl: asUrl("https://lanzadera.es/proyecto/nokues/"),
+  },
+];
+
+export const volunteerData: ReadonlyArray<VolunteerExperience> = [
+  {
+    id: "vol-001",
+    organization: "SomosCoders",
+    role: "Colaboradora y mentora",
+    startDate: asISODate("2022-01-01"),
+    description:
+      "Colaboro con SomosCoders, asociación que promueve la inclusión tecnológica y el acceso a la programación para personas de grupos subrepresentados.",
+    highlights: [
+      "Imparto talleres introductorios de programación web orientados a personas sin conocimientos previos.",
+      "Acompaño a participantes en sus primeros pasos en el mundo tech, ofreciendo mentoría individualizada.",
+      "Contribuyo a la generación de materiales formativos y recursos de aprendizaje para la comunidad.",
+    ],
+    organizationUrl: asUrl("https://somoscoders.org"),
   },
 ];
 

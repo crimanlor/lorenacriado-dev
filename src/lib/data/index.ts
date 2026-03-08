@@ -14,12 +14,12 @@
  */
 
 import type { IPortfolioRepository } from "@/domain/interfaces/repositories";
-import type { Project, NavItem, ContactInfo } from "@/domain/types";
+import type { Project, NavItem, ContactInfo, VolunteerExperience } from "@/domain/types";
 
 import { profileData }     from "./profile";
 import { projectsData }    from "./projects";
 import { skillGroupsData } from "./skills";
-import { experienceData, educationData } from "./experience";
+import { experienceData, educationData, volunteerData } from "./experience";
 
 // Navigation items — defined here as they are layout-level config
 const navItems: ReadonlyArray<NavItem> = [
@@ -45,8 +45,11 @@ class StaticPortfolioRepository implements IPortfolioRepository {
   async getProfile()        { return Promise.resolve(profileData); }
   async getAllProjects()     { return Promise.resolve(projectsData); }
   async getSkillGroups()    { return Promise.resolve(skillGroupsData); }
-  async getExperiences()    { return Promise.resolve(experienceData); }
-  async getEducation()      { return Promise.resolve(educationData); }
+  async getExperiences()         { return Promise.resolve(experienceData); }
+  async getEducation()           { return Promise.resolve(educationData); }
+  async getVolunteerExperiences(): Promise<ReadonlyArray<VolunteerExperience>> {
+    return Promise.resolve(volunteerData);
+  }
   async getNavItems()       { return Promise.resolve(navItems); }
   async getContactInfo()    { return Promise.resolve(contactInfo); }
 
@@ -75,7 +78,8 @@ export const getAllProjects       = () => portfolioRepository.getAllProjects();
 export const getFeaturedProjects  = () => portfolioRepository.getFeaturedProjects();
 export const getProjectBySlug    = (s: string) => portfolioRepository.getProjectBySlug(s);
 export const getSkillGroups      = () => portfolioRepository.getSkillGroups();
-export const getExperiences      = () => portfolioRepository.getExperiences();
-export const getEducation        = () => portfolioRepository.getEducation();
-export const getNavItems         = () => portfolioRepository.getNavItems();
-export const getContactInfo      = () => portfolioRepository.getContactInfo();
+export const getExperiences        = () => portfolioRepository.getExperiences();
+export const getEducation          = () => portfolioRepository.getEducation();
+export const getVolunteerExperiences = () => portfolioRepository.getVolunteerExperiences();
+export const getNavItems           = () => portfolioRepository.getNavItems();
+export const getContactInfo        = () => portfolioRepository.getContactInfo();

@@ -6,14 +6,15 @@
  */
 
 import { Section, SectionHeader } from "@/components/ui/Section";
-import { getProfile, getExperiences } from "@/lib/data";
+import { getProfile, getExperiences, getVolunteerExperiences } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
-import { Building2, Calendar } from "lucide-react";
+import { Building2, Calendar, Heart } from "lucide-react";
 
 export async function AboutSection() {
-  const [profile, experiences] = await Promise.all([
+  const [profile, experiences, volunteerExperiences] = await Promise.all([
     getProfile(),
     getExperiences(),
+    getVolunteerExperiences(),
   ]);
 
   return (
@@ -104,6 +105,89 @@ export async function AboutSection() {
           </ol>
         </div>
       </div>
+      
+      {/* Voluntariado */}
+      {volunteerExperiences.length > 0 && (
+        <div className="mt-16">
+          <SectionHeader eyebrow="Comunidad" heading="Voluntariado" />
+          <ol className="relative border-l border-border space-y-10 ml-4" role="list">
+            {volunteerExperiences.map((vol, index) => (
+              <li key={vol.id} className="ml-6">
+                {/* Timeline dot — corazón para voluntariado */}
+                <span
+                  aria-hidden="true"
+                  className={[
+                    "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full ring-4",
+                    index === 0
+                      ? "bg-pink-500 ring-surface"
+                      : "bg-surface-secondary ring-surface border border-border",
+                  ].join(" ")}
+                >
+                  <Heart
+                    size={12}
+                    className={index === 0 ? "text-white" : "text-pink-400"}
+                    aria-hidden="true"
+                  />
+                </span>
+
+                {/* Fechas */}
+                <div className="flex items-center gap-2 text-label-sm text-content-tertiary mb-1">
+                  <Calendar size={12} aria-hidden="true" />
+                  <time dateTime={vol.startDate}>
+                    {formatDate(vol.startDate)}
+                  </time>
+                  <span>—</span>
+                  {vol.endDate ? (
+                    <time dateTime={vol.endDate}>{formatDate(vol.endDate)}</time>
+                  ) : (
+                    <span className="text-pink-500 dark:text-pink-400 font-medium">Actualidad</span>
+                  )}
+                </div>
+
+                {/* Rol + organización */}
+                <h3 className="text-body-lg text-content font-semibold">
+                  {vol.role}
+                </h3>
+                <div className="flex items-center gap-1.5 text-body-sm text-pink-500 dark:text-pink-400 mb-3">
+                  <Building2 size={13} aria-hidden="true" />
+                  {vol.organizationUrl ? (
+                    <a
+                      href={vol.organizationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent rounded-sm"
+                    >
+                      {vol.organization}
+                    </a>
+                  ) : (
+                    vol.organization
+                  )}
+                </div>
+
+                {/* Descripción */}
+                <p className="text-body-sm text-content-secondary mb-3">
+                  {vol.description}
+                </p>
+
+                {/* Highlights */}
+                {vol.highlights.length > 0 && (
+                  <ul className="space-y-1.5" role="list" aria-label="Aspectos destacados">
+                    {vol.highlights.map((h, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-body-sm text-content-secondary"
+                      >
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-pink-500 dark:bg-pink-400" aria-hidden="true" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
     </Section>
   );
 }

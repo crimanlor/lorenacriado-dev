@@ -94,6 +94,19 @@ export interface Experience {
   readonly companyUrl?: Url;
 }
 
+// ─── Volunteer Experience ─────────────────────────────────────────────────────
+
+export interface VolunteerExperience {
+  readonly id: string;
+  readonly organization: string;
+  readonly role: string;
+  readonly startDate: ISODate;
+  readonly endDate?: ISODate; // undefined = en curso
+  readonly description: string;
+  readonly highlights: ReadonlyArray<string>;
+  readonly organizationUrl?: Url;
+}
+
 // ─── Education ───────────────────────────────────────────────────────────────
 
 export interface Education {

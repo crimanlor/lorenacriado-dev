@@ -16,9 +16,9 @@ export async function FeaturedProjects() {
   return (
     <Section id="projects" bg="secondary" spacing="lg">
       <SectionHeader
-        eyebrow="Trabajo"
+        eyebrow="Proyectos"
         heading="Proyectos destacados"
-        subheading="Una selección de proyectos de los que me siento orgullosa — desde plataformas enterprise hasta herramientas open-source."
+        subheading="Una selección de proyectos personales y contribuciones open-source que he desarrollado, impulsada por mi curiosidad técnica."
         align="center"
       />
 
